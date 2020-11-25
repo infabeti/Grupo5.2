@@ -2,16 +2,20 @@ package Vista;
 
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+
+import Controlador.ControladorPanelEditar;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 
 public class PanelEditar extends JPanel {
 	private JTextField textField;
+	private ControladorPanelEditar controladorpaneleditar;
 
 	/**
 	 * Create the panel.
 	 */
-	public PanelEditar() {
+	public PanelEditar(ControladorPanelEditar controladorpaneleditar) {
 		setLayout(null);
 		
 		textField = new JTextField();

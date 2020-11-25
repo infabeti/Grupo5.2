@@ -3,15 +3,15 @@ package Controlador;
 import Modelo.Modelo;
 import Vista.*;
 
-public class ControaldorPanelEditar{
+public class ControladorPanelEditar{
 
 	@SuppressWarnings("unused")
 	private Modelo modelo;
 	private Vista vista;
 	private Controlador controlador;
-	private PanelFin panelFin;
+	private PanelEditar panelEditar;
 	
-	public ControaldorPanelEditar(Modelo modelo, Vista vista, Controlador controlador) {
+	public ControladorPanelEditar(Modelo modelo, Vista vista, Controlador controlador) {
 		this.modelo = modelo;
 		this.vista = vista;
 		this.controlador = controlador;	
@@ -19,7 +19,7 @@ public class ControaldorPanelEditar{
 	
 	public void mostrarPanelEditar() {
 		this.panelEditar = new PanelEditar(this);
-		this.vista.mostrarPanel(this.panelFin);
+		this.vista.mostrarPanel(this.panelEditar);
 	}
 	
 	public void accionadoBottonMostrarPanelGeneros() {
