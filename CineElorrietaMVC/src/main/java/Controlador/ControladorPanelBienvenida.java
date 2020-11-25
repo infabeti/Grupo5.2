@@ -1,8 +1,7 @@
 package Controlador;
 
 import Modelo.Modelo;
-import Vista.PanelBienvenida;
-import Vista.Vista;
+import Vista.*;
 
 public class ControladorPanelBienvenida {
 

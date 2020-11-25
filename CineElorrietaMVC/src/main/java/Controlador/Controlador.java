@@ -9,6 +9,7 @@ public class Controlador {
 	private Vista vista;
 	private ControladorPanelBienvenida controladorPanelBienvenida;
 	private ControladorPanelGeneros controladorPanelGeneros;
+	private ControladorPanelPelis controladorpanelpelis;
 	
 	public Controlador(Modelo modelo, Vista vista) {
 		this.modelo = modelo;
@@ -26,5 +27,10 @@ public class Controlador {
 	public void navegarPanelGeneros() {
 		System.out.println("Navegar panel Generos");
 		this.controladorPanelGeneros.mostrarPanelGeneros();
+	}
+
+	public void navegarPanelPelis() {
+		this.controladorpanelpelis.mostrarPanelPelis();
+		
 	}
 }

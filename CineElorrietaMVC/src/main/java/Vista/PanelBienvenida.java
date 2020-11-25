@@ -1,16 +1,12 @@
 package Vista;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import Controlador.ControladorPanelBienvenida;
+import java.awt.Font;
 
 @SuppressWarnings("serial")
 public class PanelBienvenida extends JPanel{
-
-	private JButton btnGeneros;
 	private JLabel lblBienvenida;
 	private ControladorPanelBienvenida controladorPanelBienvenida;
 	
@@ -19,27 +15,21 @@ public class PanelBienvenida extends JPanel{
 		
 		setLayout(null);
 		
-		lblBienvenida = new JLabel("Panel Bienvenida");
-		lblBienvenida.setBounds(58, 35, 115, 14);
+		lblBienvenida = new JLabel("BIENVENIDO");
+		lblBienvenida.setFont(new Font("Times New Roman", Font.BOLD, 30));
+		lblBienvenida.setBounds(191, 121, 269, 105);
 		add(lblBienvenida);
 		
-		btnGeneros = new JButton("Generos");
-		btnGeneros.setBounds(58, 116, 120, 23);
-		add(btnGeneros);
+		JLabel lblAlCineElorrieta = new JLabel("AL CINE ELORRIETA");
+		lblAlCineElorrieta.setFont(new Font("Times New Roman", Font.BOLD, 30));
+		lblAlCineElorrieta.setBounds(130, 173, 351, 105);
+		add(lblAlCineElorrieta);
 		
-		initializeEvents();
-	}
-	
-	private void initializeEvents() {
-		this.btnGeneros.addActionListener(listenerBotonGeneros(this.controladorPanelBienvenida));
-	}
-	
-	private ActionListener listenerBotonGeneros(ControladorPanelBienvenida controladorPanelBienvenida) {
-		return new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				System.out.println("Ejecutando evento Boton Generos");
-				controladorPanelBienvenida.accionadoBottonMostrarPanelGeneros();
-			}
-		};
+		try {
+			Thread.sleep(3000);
+		} catch (Exception e) {
+			
+		}
+		this.controladorPanelBienvenida.accionadoBottonMostrarPanelGeneros();
 	}
 }
