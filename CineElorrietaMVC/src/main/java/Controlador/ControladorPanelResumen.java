@@ -2,18 +2,18 @@ package Controlador;
 
 import Modelo.Modelo;
 import Vista.PanelBienvenida;
-import Vista.PanelPelis;
+import Vista.PanelResumen;
 import Vista.Vista;
 
-public class ControladorPanelPelis {
-
+public class ControladorPanelResumen {
+	
 	@SuppressWarnings("unused")
 	private Modelo modelo;
 	private Vista vista;
 	private Controlador controlador;
-	private PanelPelis panelPelis;
+	private PanelResumen panelResumen;
 	
-	public ControladorPanelPelis(Modelo modelo, Vista vista, Controlador controlador) {
+	public ControladorPanelResumen(Modelo modelo, Vista vista, Controlador controlador) {
 		this.modelo = modelo;
 		this.vista = vista;
 		this.controlador = controlador;	
@@ -24,13 +24,11 @@ public class ControladorPanelPelis {
 	}
 
 	public void mostrarPanelPelis() {
-		this.panelPelis = new PanelPelis(this);
-		this.vista.mostrarPanel(this.panelPelis);
+		this.panelResumen = new PanelResumen(this);
+		this.vista.mostrarPanel(this.panelResumen);
 	}
-	
-	public PanelPelis makePanelPelis (ControladorPanelPelis controladorpanelpelis) {
-		return new PanelPelis(controladorpanelpelis);
+
+	public PanelResumen makePanelResumen(ControladorPanelResumen controladorpanelresumen) {
+		return new PanelResumen(controladorpanelresumen);
 	}
 }
-
-

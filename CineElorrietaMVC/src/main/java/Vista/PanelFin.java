@@ -25,6 +25,6 @@ public class PanelFin extends JPanel{
 		} catch (Exception e) {
 			
 		}
-		this.controladorPanelFin.accionadoBottonMostrarPanelGeneros();
+		this.controladorPanelFin.accionadoBottonMostrarPanelFin();
 	}
 }

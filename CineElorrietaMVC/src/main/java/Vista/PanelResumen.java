@@ -4,12 +4,18 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
+
+import Controlador.ControladorPanelResumen;
+
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class PanelResumen extends JPanel{
-	public PanelResumen() {
+	
+	private ControladorPanelResumen controladorpanelresumen;
+	
+	public PanelResumen(ControladorPanelResumen controladorpanelresumen) {
 		setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("SABADO");

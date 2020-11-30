@@ -2,6 +2,9 @@ package Vista;
 
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+
+import Controlador.ControladorPanelLogin;
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -11,7 +14,8 @@ import java.awt.event.ActionEvent;
 public class PanelLogin extends JPanel{
 	private JTextField textField;
 	private JTextField textField_1;
-	public PanelLogin() {
+	private ControladorPanelLogin controladorpanellogin;
+	public PanelLogin(ControladorPanelLogin controladorpanellogin) {
 		setLayout(null);
 		
 		textField = new JTextField();

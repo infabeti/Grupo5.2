@@ -25,6 +25,10 @@ public class ControladorPanelGeneros {
 	}
 	
 	public void accionadoBottonVolverPanelGeneros() {
-		this.controlador.navegarPanelBienvenida();
+		this.controlador.navegarPanelGeneros();
+	}
+	
+	public PanelGeneros makePanelGeneros(ControladorPanelGeneros controladorpanelgeneros) {
+		return new PanelGeneros(controladorpanelgeneros);
 	}
 }

@@ -1,7 +1,9 @@
 package Controlador;
 
 import Modelo.Modelo;
-import Vista.*;
+import Vista.Vista;
+import Vista.PanelBienvenida;
+import Vista.PanelEditar;
 
 public class ControladorPanelEditar{
 
@@ -22,7 +24,11 @@ public class ControladorPanelEditar{
 		this.vista.mostrarPanel(this.panelEditar);
 	}
 	
-	public void accionadoBottonMostrarPanelGeneros() {
-		this.controlador.navegarPanelGeneros();
+	public void accionadoBottonMostrarPanelEditar() {
+		this.controlador.navegarPanelEditar();
+	}
+	
+	public PanelEditar makePanelEditar(ControladorPanelEditar controladorpaneleditar) {
+		return new PanelEditar(controladorpaneleditar);
 	}
 }
