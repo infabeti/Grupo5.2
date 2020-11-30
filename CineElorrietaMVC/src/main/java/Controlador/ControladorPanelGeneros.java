@@ -7,6 +7,7 @@ import Vista.Vista;
 
 public class ControladorPanelGeneros {
 
+	@SuppressWarnings("unused")
 	private Modelo modelo;
 	private Vista vista;
 	private Controlador controlador;
