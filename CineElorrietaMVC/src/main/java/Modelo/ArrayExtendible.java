@@ -29,25 +29,31 @@ public class ArrayExtendible<T> {
 		T[] tTemp = ((T[]) new Object[tamanio-1]);
 		for(int i=0,j=0;i<tamanio;i++)
 		{
-			if(j!=num)
+			if(i!=num)
 			{
-				tTemp[j]=tTemp[i];
+				tTemp[j]=t[i];
 				j++;
 			}
 		}
+		t=tTemp;
+		tamanio--;
 		
 	}
 	
-	public T Recoger(int num) throws Exception
+	public T Recoger(int num) throws IndexOutOfBoundsException
 	{
 		if(num>0 && num<tamanio)
 			return t[num];
 		else
-			throw(new Exception("Error accediendo a un elemento en la posicion "+num+" en el Array extendible"));
+			throw(new IndexOutOfBoundsException());
 	}
 	
 	public T[] ConseguirArray()
 	{
 		return t;
+	}
+
+	public int getTamanio() {
+		return tamanio;
 	}
 }
