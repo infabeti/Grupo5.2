@@ -9,7 +9,7 @@ public class Controlador {
 	private Vista vista;
 	private ControladorPanelBienvenida controladorPanelBienvenida;
 	private ControladorPanelGeneros controladorPanelGeneros;
-	private ControladorPanelPelis controladorpanelpelis;
+	private Controlador controladorpanelpelis;
 	
 	public Controlador(Modelo modelo, Vista vista) {
 		this.modelo = modelo;
@@ -30,7 +30,7 @@ public class Controlador {
 	}
 
 	public void navegarPanelPelis() {
-		this.controladorpanelpelis.mostrarPanelPelis();
+		this.controladorpanelpelis.navegarPanelPelis();
 		
 	}
 }
