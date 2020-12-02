@@ -6,7 +6,7 @@ public class GestionPeliculas {
 	private ArrayExtendible<Pelicula> Peliculas;
 	private LeerPeliculas LP;
 	
-	GestionPeliculas()
+	public GestionPeliculas()
 	{
 		LP = new LeerPeliculas();
 		this.CargarPelis();
