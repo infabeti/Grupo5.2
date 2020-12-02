@@ -17,24 +17,29 @@ public class PanelPelis extends JPanel {
 
 	public PanelPelis(ControladorPanelPelis controladorpanelpelis) {
 		setLayout(null);
+		setBounds(100,100,500,400);
 
 		JLabel lblNewLabel = new JLabel("PELIS");
 		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 30));
 		lblNewLabel.setBounds(190, 13, 128, 33);
 		add(lblNewLabel);
 
-		JTextArea textArea = new JTextArea();
-		textArea.setBounds(37, 101, 425, 192);
-		add(textArea);
+		JTextArea txtAreaPelis = new JTextArea();
+		txtAreaPelis.setBounds(37, 101, 425, 192);
+		add(txtAreaPelis);
 
-		JComboBox comboBox = new JComboBox();
-		comboBox.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		comboBox.setBounds(190, 57, 93, 33);
-		add(comboBox);
+		JComboBox cmbXPelis = new JComboBox();
+		cmbXPelis.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		cmbXPelis.setBounds(190, 57, 93, 33);
+		add(cmbXPelis);
 
-		JButton btnNewButton = new JButton("CONTINUAR");
-		btnNewButton.setBounds(352, 304, 110, 23);
-		add(btnNewButton);
+		JButton btnAtras = new JButton("ATRAS");
+		btnAtras.setBounds(37, 304, 115, 42);
+		add(btnAtras);
+		
+		JButton btnContinuar = new JButton("CONTINUAR");
+		btnContinuar.setBounds(347, 306, 115, 42);
+		add(btnContinuar);
 
 	}
 }

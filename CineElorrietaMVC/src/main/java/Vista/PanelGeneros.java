@@ -13,7 +13,7 @@ import javax.swing.JTextArea;
 @SuppressWarnings("serial")
 public class PanelGeneros extends JPanel {
 
-	private JButton btnVolver;
+	private JButton btnDrama;
 	private JLabel lblGeneros;
 	private ControladorPanelGeneros controladorPanelGeneros;
 	
@@ -21,31 +21,32 @@ public class PanelGeneros extends JPanel {
 	{
 		this.controladorPanelGeneros = controladorPanelGeneros;
 		setLayout(null);
+		setBounds(100,100,500,400);
 		
 		lblGeneros = new JLabel("SELECCION DE GENEROS");
 		lblGeneros.setFont(new Font("Times New Roman", Font.PLAIN, 30));
-		lblGeneros.setBounds(8, 5, 359, 35);
+		lblGeneros.setBounds(69, 11, 359, 35);
 		add(lblGeneros);
 		
-		btnVolver = new JButton("DRAMA");
-		btnVolver.setBounds(8, 134, 169, 51);
-		add(btnVolver);
+		btnDrama = new JButton("DRAMA");
+		btnDrama.setBounds(8, 134, 169, 51);
+		add(btnDrama);
 		
-		JButton btnVolver_1 = new JButton("CIENCIA FICCION");
-		btnVolver_1.addActionListener(new ActionListener() {
+		JButton btnCienciaFiccion = new JButton("CIENCIA FICCION");
+		btnCienciaFiccion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnVolver_1.setBounds(8, 72, 169, 51);
-		add(btnVolver_1);
+		btnCienciaFiccion.setBounds(8, 72, 169, 51);
+		add(btnCienciaFiccion);
 		
-		JButton btnVolver_2 = new JButton("TERROR");
-		btnVolver_2.setBounds(8, 196, 169, 51);
-		add(btnVolver_2);
+		JButton btnTerror = new JButton("TERROR");
+		btnTerror.setBounds(8, 196, 169, 51);
+		add(btnTerror);
 		
-		JButton btnVolver_3 = new JButton("COMEDIA");
-		btnVolver_3.setBounds(8, 258, 169, 51);
-		add(btnVolver_3);
+		JButton btnComedia = new JButton("COMEDIA");
+		btnComedia.setBounds(8, 258, 169, 51);
+		add(btnComedia);
 		
 		JTextArea txtrPelisSeleccionadas = new JTextArea();
 		txtrPelisSeleccionadas.setBounds(187, 107, 241, 202);
@@ -53,34 +54,34 @@ public class PanelGeneros extends JPanel {
 		
 		JLabel lblNewLabel = new JLabel("PELIS SELECCIONADAS");
 		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		lblNewLabel.setBounds(224, 52, 276, 23);
+		lblNewLabel.setBounds(224, 44, 276, 23);
 		add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Horas restantes");
-		lblNewLabel_1.setBounds(223, 320, 177, 23);
-		add(lblNewLabel_1);
+		JLabel lblHorasRestantes = new JLabel("Horas restantes");
+		lblHorasRestantes.setBounds(223, 320, 177, 23);
+		add(lblHorasRestantes);
 		
-		JButton btnNewButton = new JButton("SABADO");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		btnNewButton.setBounds(187, 73, 107, 23);
-		add(btnNewButton);
+		JButton btnSabado = new JButton("SABADO");
+		btnSabado.setBounds(187, 73, 122, 23);
+		add(btnSabado);
 		
 		JButton btnDomingo = new JButton("DOMINGO");
 		btnDomingo.setBounds(319, 73, 144, 23);
 		add(btnDomingo);
 		
-		JButton btnNewButton_1 = new JButton("CONTINUAR");
-		btnNewButton_1.setBounds(370, 333, 93, 23);
-		add(btnNewButton_1);
+		JButton btnContinuar = new JButton("CONTINUAR");
+		btnContinuar.setBounds(362, 346, 93, 23);
+		add(btnContinuar);
+		
+		JButton btnVolver = new JButton("VOLVER");
+		btnVolver.setBounds(8, 346, 93, 23);
+		add(btnVolver);
 		
 		initializeEvents();
 	}
 	
 	private void initializeEvents() {
-		this.btnVolver.addActionListener(listenerBotonVolver(this.controladorPanelGeneros));
+		this.btnDrama.addActionListener(listenerBotonVolver(this.controladorPanelGeneros));
 	}
 	
 	private ActionListener listenerBotonVolver(ControladorPanelGeneros controladorPanelGeneros) {

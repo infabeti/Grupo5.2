@@ -14,6 +14,7 @@ public class PanelBienvenida extends JPanel{
 		this.controladorPanelBienvenida = controladorPanelBienvenida;
 		
 		setLayout(null);
+		setBounds(100,100,500,400);
 		
 		lblBienvenida = new JLabel("BIENVENIDO");
 		lblBienvenida.setFont(new Font("Times New Roman", Font.BOLD, 30));

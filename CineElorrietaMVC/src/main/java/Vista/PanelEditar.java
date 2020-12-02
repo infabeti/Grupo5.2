@@ -19,6 +19,7 @@ public class PanelEditar extends JPanel {
 	public PanelEditar(ControladorPanelEditar controladorpaneleditar) {
 		this.controladorpaneleditar = controladorpaneleditar;
 		setLayout(null);
+		setBounds(100,100,500,400);
 		
 		textField = new JTextField();
 		textField.setBounds(245, 77, 210, 92);

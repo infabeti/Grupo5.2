@@ -18,6 +18,7 @@ public class PanelResumen extends JPanel{
 	
 	public PanelResumen(ControladorPanelResumen controladorpanelresumen) {
 		setLayout(null);
+		setBounds(100,100,500,400);
 		
 		JLabel lblNewLabel = new JLabel("SABADO");
 		lblNewLabel.setFont(new Font("Times New Roman", Font.PLAIN, 30));
@@ -29,24 +30,24 @@ public class PanelResumen extends JPanel{
 		lblNewLabel_1.setBounds(288, 8, 165, 46);
 		add(lblNewLabel_1);
 		
-		JButton btnNewButton = new JButton("CANCELAR");
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnAtras = new JButton("CANCELAR");
+		btnAtras.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnNewButton.setBounds(70, 269, 101, 23);
-		add(btnNewButton);
+		btnAtras.setBounds(67, 323, 101, 37);
+		add(btnAtras);
 		
 		JButton btnNewButton_1 = new JButton("CONTINUAR");
-		btnNewButton_1.setBounds(325, 269, 93, 23);
+		btnNewButton_1.setBounds(341, 323, 93, 37);
 		add(btnNewButton_1);
 		
-		JTextArea textArea = new JTextArea();
-		textArea.setBounds(10, 65, 227, 193);
-		add(textArea);
+		JTextArea txtASabado = new JTextArea();
+		txtASabado.setBounds(10, 65, 227, 234);
+		add(txtASabado);
 		
-		JTextArea textArea_1 = new JTextArea();
-		textArea_1.setBounds(247, 65, 243, 193);
-		add(textArea_1);
+		JTextArea txtADomingo = new JTextArea();
+		txtADomingo.setBounds(247, 65, 243, 234);
+		add(txtADomingo);
 	}
 }
