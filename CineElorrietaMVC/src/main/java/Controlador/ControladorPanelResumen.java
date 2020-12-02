@@ -19,11 +19,15 @@ public class ControladorPanelResumen {
 		this.controlador = controlador;	
 	}
 	
-	public void accionadoBottonMostrarPanelGeneros() {
+	public void accionadoBottonVolverPanelResumen() {
 		this.controlador.navegarPanelPelis();
 	}
 
-	public void mostrarPanelPelis() {
+	public void accionadoBottonAceptarPanelResumen() {
+		this.controlador.navegarPanelFin();
+	}
+	
+	public void mostrarPanelResumen() {
 		this.panelResumen = new PanelResumen(this);
 		this.vista.mostrarPanel(this.panelResumen);
 	}

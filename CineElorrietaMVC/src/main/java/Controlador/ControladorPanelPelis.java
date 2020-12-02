@@ -19,8 +19,12 @@ public class ControladorPanelPelis {
 		this.controlador = controlador;	
 	}
 	
-	public void accionadoBottonMostrarPanelGeneros() {
-		this.controlador.navegarPanelPelis();
+	public void accionadoBottonVolverPanelPelis() {
+		this.controlador.navegarPanelGeneros();
+	}
+	
+	public void accionadoBottonAceptarPanelPelis() {
+		this.controlador.navegarPanelResumen();
 	}
 
 	public void mostrarPanelPelis() {

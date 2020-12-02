@@ -25,7 +25,11 @@ public class ControladorPanelGeneros {
 	}
 	
 	public void accionadoBottonVolverPanelGeneros() {
-		this.controlador.navegarPanelGeneros();
+		this.controlador.navegarPanelLogin();
+	}
+	
+	public void accionadoBottonAceptarPanelGeneros() {
+		this.controlador.navegarPanelPelis();
 	}
 	
 }

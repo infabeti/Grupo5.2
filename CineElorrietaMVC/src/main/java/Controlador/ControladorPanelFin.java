@@ -2,7 +2,6 @@ package Controlador;
 
 import Modelo.Modelo;
 import Vista.Vista;
-import Vista.PanelBienvenida;
 import Vista.PanelFin;
 
 public class ControladorPanelFin {
@@ -22,10 +21,6 @@ public class ControladorPanelFin {
 	public void mostrarPanelFin() {
 		this.panelFin = new PanelFin(this);
 		this.vista.mostrarPanel(this.panelFin);
-	}
-
-	public void accionadoBottonMostrarPanelFin() {
-		this.controlador.navegarPanelFin();
 	}
 
 }

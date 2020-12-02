@@ -18,8 +18,8 @@ public class ControladorPanelLogin {
 		this.controlador = controlador;	
 	}
 	
-	public void accionadoBottonMostrarPanelLogin() {
-		this.controlador.navegarPanelLogin();
+	public void accionadoBottonMostrarPanelGeneros() {
+		this.controlador.navegarPanelGeneros();
 	}
 
 	public void mostrarPanelLogin() {
