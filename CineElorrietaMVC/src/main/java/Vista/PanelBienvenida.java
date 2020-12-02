@@ -17,12 +17,12 @@ public class PanelBienvenida extends JPanel{
 		
 		lblBienvenida = new JLabel("BIENVENIDO");
 		lblBienvenida.setFont(new Font("Times New Roman", Font.BOLD, 30));
-		lblBienvenida.setBounds(191, 121, 269, 105);
+		lblBienvenida.setBounds(141, 121, 269, 105);
 		add(lblBienvenida);
 		
 		JLabel lblAlCineElorrieta = new JLabel("AL CINE ELORRIETA");
 		lblAlCineElorrieta.setFont(new Font("Times New Roman", Font.BOLD, 30));
-		lblAlCineElorrieta.setBounds(130, 173, 351, 105);
+		lblAlCineElorrieta.setBounds(85, 182, 351, 105);
 		add(lblAlCineElorrieta);
 	}
 }

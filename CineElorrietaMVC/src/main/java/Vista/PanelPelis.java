@@ -20,20 +20,20 @@ public class PanelPelis extends JPanel {
 
 		JLabel lblNewLabel = new JLabel("PELIS");
 		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 30));
-		lblNewLabel.setBounds(240, 11, 128, 33);
+		lblNewLabel.setBounds(190, 13, 128, 33);
 		add(lblNewLabel);
 
 		JTextArea textArea = new JTextArea();
-		textArea.setBounds(36, 100, 497, 194);
+		textArea.setBounds(37, 101, 425, 192);
 		add(textArea);
 
 		JComboBox comboBox = new JComboBox();
 		comboBox.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		comboBox.setBounds(234, 55, 93, 33);
+		comboBox.setBounds(190, 57, 93, 33);
 		add(comboBox);
 
 		JButton btnNewButton = new JButton("CONTINUAR");
-		btnNewButton.setBounds(480, 366, 110, 23);
+		btnNewButton.setBounds(352, 304, 110, 23);
 		add(btnNewButton);
 
 	}

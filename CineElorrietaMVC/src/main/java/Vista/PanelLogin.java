@@ -20,17 +20,17 @@ public class PanelLogin extends JPanel{
 		setLayout(null);
 		
 		textField = new JTextField();
-		textField.setBounds(169, 103, 86, 20);
+		textField.setBounds(189, 182, 118, 20);
 		add(textField);
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(169, 172, 86, 20);
+		textField_1.setBounds(189, 256, 118, 20);
 		add(textField_1);
 		textField_1.setColumns(10);
 		
 		JButton btnNewButton = new JButton("CANCELAR");
-		btnNewButton.setBounds(10, 244, 89, 23);
+		btnNewButton.setBounds(63, 287, 131, 43);
 		add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("CONFIRMAR\r\n");
@@ -38,22 +38,22 @@ public class PanelLogin extends JPanel{
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnNewButton_1.setBounds(336, 244, 104, 23);
+		btnNewButton_1.setBounds(309, 287, 131, 43);
 		add(btnNewButton_1);
 		
 		JLabel lblNewLabel = new JLabel("USER");
 		lblNewLabel.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblNewLabel.setBounds(189, 79, 118, 23);
+		lblNewLabel.setBounds(222, 148, 118, 23);
 		add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("PASSWORD");
 		lblNewLabel_1.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblNewLabel_1.setBounds(166, 134, 228, 27);
+		lblNewLabel_1.setBounds(189, 218, 228, 27);
 		add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("LOGIN");
 		lblNewLabel_2.setFont(new Font("Times New Roman", Font.PLAIN, 30));
-		lblNewLabel_2.setBounds(169, 11, 155, 69);
+		lblNewLabel_2.setBounds(200, 69, 205, 102);
 		add(lblNewLabel_2);
 	}
 }

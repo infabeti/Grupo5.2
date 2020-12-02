@@ -20,14 +20,15 @@ public class PanelGeneros extends JPanel {
 	public PanelGeneros(ControladorPanelGeneros controladorPanelGeneros)
 	{
 		this.controladorPanelGeneros = controladorPanelGeneros;
+		setLayout(null);
 		
 		lblGeneros = new JLabel("SELECCION DE GENEROS");
 		lblGeneros.setFont(new Font("Times New Roman", Font.PLAIN, 30));
-		lblGeneros.setBounds(36, 11, 379, 40);
+		lblGeneros.setBounds(8, 5, 359, 35);
 		add(lblGeneros);
 		
 		btnVolver = new JButton("DRAMA");
-		btnVolver.setBounds(10, 96, 121, 23);
+		btnVolver.setBounds(8, 134, 169, 51);
 		add(btnVolver);
 		
 		JButton btnVolver_1 = new JButton("CIENCIA FICCION");
@@ -35,28 +36,28 @@ public class PanelGeneros extends JPanel {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnVolver_1.setBounds(10, 130, 121, 23);
+		btnVolver_1.setBounds(8, 72, 169, 51);
 		add(btnVolver_1);
 		
 		JButton btnVolver_2 = new JButton("TERROR");
-		btnVolver_2.setBounds(10, 164, 121, 23);
+		btnVolver_2.setBounds(8, 196, 169, 51);
 		add(btnVolver_2);
 		
 		JButton btnVolver_3 = new JButton("COMEDIA");
-		btnVolver_3.setBounds(10, 198, 121, 23);
+		btnVolver_3.setBounds(8, 258, 169, 51);
 		add(btnVolver_3);
 		
 		JTextArea txtrPelisSeleccionadas = new JTextArea();
-		txtrPelisSeleccionadas.setBounds(176, 95, 210, 91);
+		txtrPelisSeleccionadas.setBounds(187, 107, 241, 202);
 		add(txtrPelisSeleccionadas);
 		
 		JLabel lblNewLabel = new JLabel("PELIS SELECCIONADAS");
 		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		lblNewLabel.setBounds(194, 62, 210, 23);
+		lblNewLabel.setBounds(224, 52, 276, 23);
 		add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel(".");
-		lblNewLabel_1.setBounds(176, 238, 68, 14);
+		JLabel lblNewLabel_1 = new JLabel("Horas restantes");
+		lblNewLabel_1.setBounds(223, 320, 177, 23);
 		add(lblNewLabel_1);
 		
 		JButton btnNewButton = new JButton("SABADO");
@@ -64,15 +65,15 @@ public class PanelGeneros extends JPanel {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnNewButton.setBounds(176, 204, 89, 23);
+		btnNewButton.setBounds(187, 73, 107, 23);
 		add(btnNewButton);
 		
 		JButton btnDomingo = new JButton("DOMINGO");
-		btnDomingo.setBounds(297, 204, 89, 23);
+		btnDomingo.setBounds(319, 73, 144, 23);
 		add(btnDomingo);
 		
 		JButton btnNewButton_1 = new JButton("CONTINUAR");
-		btnNewButton_1.setBounds(327, 266, 113, 23);
+		btnNewButton_1.setBounds(370, 333, 93, 23);
 		add(btnNewButton_1);
 		
 		initializeEvents();

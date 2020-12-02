@@ -17,7 +17,7 @@ public class PanelFin extends JPanel{
 		
 		lblFin = new JLabel("FIN");
 		lblFin.setFont(new Font("Times New Roman", Font.BOLD, 30));
-		lblFin.setBounds(246, 139, 269, 105);
+		lblFin.setBounds(210, 138, 269, 105);
 		add(lblFin);
 		
 		try {
