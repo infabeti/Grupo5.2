@@ -24,12 +24,5 @@ public class PanelBienvenida extends JPanel{
 		lblAlCineElorrieta.setFont(new Font("Times New Roman", Font.BOLD, 30));
 		lblAlCineElorrieta.setBounds(130, 173, 351, 105);
 		add(lblAlCineElorrieta);
-		
-		try {
-			Thread.sleep(3000);
-		} catch (Exception e) {
-			
-		}
-		this.controladorPanelBienvenida.accionadoBottonMostrarPanelGeneros();
 	}
 }

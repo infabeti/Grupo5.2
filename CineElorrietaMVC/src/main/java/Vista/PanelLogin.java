@@ -11,6 +11,7 @@ import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+@SuppressWarnings("serial")
 public class PanelLogin extends JPanel{
 	private JTextField textField;
 	private JTextField textField_1;

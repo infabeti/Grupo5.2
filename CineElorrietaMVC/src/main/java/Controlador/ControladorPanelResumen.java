@@ -28,7 +28,4 @@ public class ControladorPanelResumen {
 		this.vista.mostrarPanel(this.panelResumen);
 	}
 
-	public PanelResumen makePanelResumen(ControladorPanelResumen controladorpanelresumen) {
-		return new PanelResumen(controladorpanelresumen);
-	}
 }

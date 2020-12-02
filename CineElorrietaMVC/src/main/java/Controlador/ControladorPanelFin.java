@@ -28,7 +28,4 @@ public class ControladorPanelFin {
 		this.controlador.navegarPanelFin();
 	}
 
-	public PanelFin makePanelFin(ControladorPanelFin controladorpanelfin) {
-		return new PanelFin(controladorpanelfin);
-	}
 }

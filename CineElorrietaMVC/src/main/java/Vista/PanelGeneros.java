@@ -21,8 +21,6 @@ public class PanelGeneros extends JPanel {
 	{
 		this.controladorPanelGeneros = controladorPanelGeneros;
 		
-		setLayout(null);
-		
 		lblGeneros = new JLabel("SELECCION DE GENEROS");
 		lblGeneros.setFont(new Font("Times New Roman", Font.PLAIN, 30));
 		lblGeneros.setBounds(36, 11, 379, 40);

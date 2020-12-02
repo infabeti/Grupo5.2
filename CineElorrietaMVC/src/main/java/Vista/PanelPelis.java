@@ -10,6 +10,7 @@ import java.awt.Font;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
 
+@SuppressWarnings("serial")
 public class PanelPelis extends JPanel {
 
 	private ControladorPanelPelis controladorpanelpelis;

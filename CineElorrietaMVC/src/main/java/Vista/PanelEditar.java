@@ -8,6 +8,7 @@ import Controlador.ControladorPanelEditar;
 import javax.swing.JLabel;
 import java.awt.Font;
 
+@SuppressWarnings("serial")
 public class PanelEditar extends JPanel {
 	private JTextField textField;
 	private ControladorPanelEditar controladorpaneleditar;
@@ -16,6 +17,7 @@ public class PanelEditar extends JPanel {
 	 * Create the panel.
 	 */
 	public PanelEditar(ControladorPanelEditar controladorpaneleditar) {
+		this.controladorpaneleditar = controladorpaneleditar;
 		setLayout(null);
 		
 		textField = new JTextField();

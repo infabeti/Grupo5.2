@@ -27,7 +27,4 @@ public class ControladorPanelLogin {
 		this.vista.mostrarPanel(this.panelLogin);
 	}
 
-	public PanelLogin makePanelLogin(ControladorPanelLogin controladorpanellogin) {
-		return new PanelLogin(controladorpanellogin);
-	}
 }

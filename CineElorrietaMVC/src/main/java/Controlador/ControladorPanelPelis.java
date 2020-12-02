@@ -27,10 +27,7 @@ public class ControladorPanelPelis {
 		this.panelPelis = new PanelPelis(this);
 		this.vista.mostrarPanel(this.panelPelis);
 	}
-	
-	public PanelPelis makePanelPelis (ControladorPanelPelis controladorpanelpelis) {
-		return new PanelPelis(controladorpanelpelis);
-	}
+
 }
 
 
