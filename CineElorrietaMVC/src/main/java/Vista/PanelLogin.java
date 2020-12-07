@@ -1,6 +1,7 @@
 package Vista;
 
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 import Controlador.ControladorPanelLogin;
@@ -14,7 +15,7 @@ import java.awt.event.ActionEvent;
 @SuppressWarnings("serial")
 public class PanelLogin extends JPanel{
 	private JTextField txtFUsuario;
-	private JTextField txtFPasswd;
+	private JPasswordField txtFPasswd;
 	private ControladorPanelLogin controladorpanellogin;
 	public PanelLogin(ControladorPanelLogin controladorpanellogin) {
 		setLayout(null);
@@ -25,7 +26,7 @@ public class PanelLogin extends JPanel{
 		add(txtFUsuario);
 		txtFUsuario.setColumns(10);
 		
-		txtFPasswd = new JTextField();
+		txtFPasswd = new JPasswordField();
 		txtFPasswd.setBounds(230, 201, 118, 20);
 		add(txtFPasswd);
 		txtFPasswd.setColumns(10);
@@ -33,6 +34,7 @@ public class PanelLogin extends JPanel{
 		JButton btnAceptar = new JButton("ACEPTAR");
 		btnAceptar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				controladorpanellogin.accionadoBottonMostrarPanelGeneros(txtFUsuario.getText(),txtFPasswd.getPassword());
 			}
 		});
 		btnAceptar.setBounds(185, 284, 131, 43);

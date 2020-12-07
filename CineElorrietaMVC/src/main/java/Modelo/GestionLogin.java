@@ -22,7 +22,7 @@ public class GestionLogin {
 		{
 			if(Usuarios[i].equals(inUsuario))
 				if(Arrays.equals(Contrasenas[i], inContrasena))
-					return i;
+					return i+1;
 		}
 		return 0;
 	}

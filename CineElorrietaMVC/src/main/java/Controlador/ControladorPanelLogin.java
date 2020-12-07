@@ -1,5 +1,6 @@
 package Controlador;
 
+import Modelo.GestionLogin;
 import Modelo.Modelo;
 import Vista.PanelBienvenida;
 import Vista.PanelLogin;
@@ -18,8 +19,10 @@ public class ControladorPanelLogin {
 		this.controlador = controlador;	
 	}
 	
-	public void accionadoBottonMostrarPanelGeneros() {
-		this.controlador.navegarPanelGeneros();
+	public void accionadoBottonMostrarPanelGeneros(String user, char[] password) {
+		int result = this.modelo.getGestorLogin().compararContrasenas(user, password);
+		if(result != 0)
+			this.controlador.navegarPanelGeneros();
 	}
 
 	public void mostrarPanelLogin() {
