@@ -55,32 +55,5 @@ public class Controlador {
 	public void navegarPanelResumen() {
 		this.controladorPanelResumen.mostrarPanelResumen();
 	}
-	
-	public ControladorPanelBienvenida makeControladorPanelBienvenida(Modelo modelo, Vista vista, Controlador controlador) {
-		return new ControladorPanelBienvenida(modelo, vista, this);
-	}
-	
-	public ControladorPanelGeneros makeControladorPanelGeneros(Modelo modelo, Vista vista, Controlador controlador) {
-		return new ControladorPanelGeneros(modelo, vista, this);
-	}
-	
-	public ControladorPanelPelis makeControladorPanelPelis(Modelo modelo, Vista vista, Controlador controlador) {
-		return new ControladorPanelPelis(modelo, vista, this);
-	}
-	
-	public ControladorPanelEditar makeControladorPanelEditar(Modelo modelo, Vista vista, Controlador controlador) {
-		return new ControladorPanelEditar(modelo, vista, this);
-	}
-	
-	public ControladorPanelFin makeControladorPanelFin(Modelo modelo, Vista vista, Controlador controlador) {
-		return new ControladorPanelFin(modelo, vista, this);
-	}
-	
-	public ControladorPanelLogin makeControladorPanelLogin(Modelo modelo, Vista vista, Controlador controlador) {
-		return new ControladorPanelLogin(modelo, vista, this);
-	}
-	
-	public ControladorPanelResumen makeControladorPanelResumen(Modelo modelo, Vista vista, Controlador controlador) {
-		return new ControladorPanelResumen(modelo, vista, this);
-	}
+
 }
