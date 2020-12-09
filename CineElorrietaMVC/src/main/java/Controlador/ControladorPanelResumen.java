@@ -20,7 +20,7 @@ public class ControladorPanelResumen {
 	}
 	
 	public void accionadoBottonVolverPanelResumen() {
-		this.controlador.navegarPanelPelis();
+		this.controlador.navegarPanelGeneros();
 	}
 
 	public void accionadoBottonAceptarPanelResumen() {

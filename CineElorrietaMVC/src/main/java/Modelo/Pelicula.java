@@ -15,7 +15,7 @@ public class Pelicula {
 	
 	public Pelicula (String PeliEnTexto)
 	{
-		String[] datos = PeliEnTexto.split("*");
+		String[] datos = PeliEnTexto.split("\\;");
 		this.codigoGenero = Integer.parseInt(datos[0]);
 		this.codigoPeli = Integer.parseInt(datos[1]);
 		this.Nombre = datos[2];

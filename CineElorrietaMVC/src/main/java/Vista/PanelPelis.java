@@ -13,6 +13,8 @@ import javax.swing.JButton;
 @SuppressWarnings("serial")
 public class PanelPelis extends JPanel {
 
+	private JTextArea txtAreaPelis;
+	private JComboBox<Integer> cmbXPelis;
 	private ControladorPanelPelis controladorpanelpelis;
 
 	public PanelPelis(ControladorPanelPelis controladorpanelpelis) {
@@ -24,11 +26,11 @@ public class PanelPelis extends JPanel {
 		lblNewLabel.setBounds(190, 13, 128, 33);
 		add(lblNewLabel);
 
-		JTextArea txtAreaPelis = new JTextArea();
+		txtAreaPelis = new JTextArea();
 		txtAreaPelis.setBounds(37, 101, 425, 192);
 		add(txtAreaPelis);
 
-		JComboBox cmbXPelis = new JComboBox();
+		cmbXPelis = new JComboBox<Integer>();
 		cmbXPelis.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		cmbXPelis.setBounds(190, 57, 93, 33);
 		add(cmbXPelis);
@@ -40,6 +42,16 @@ public class PanelPelis extends JPanel {
 		JButton btnContinuar = new JButton("CONTINUAR");
 		btnContinuar.setBounds(347, 306, 115, 42);
 		add(btnContinuar);
-
 	}
+	
+	public JTextArea GetTxtAreaPelis()
+	{
+		return txtAreaPelis;
+	}
+	
+	public JComboBox<Integer> GetPanelCombo()
+	{
+		return cmbXPelis;
+	}
+	
 }

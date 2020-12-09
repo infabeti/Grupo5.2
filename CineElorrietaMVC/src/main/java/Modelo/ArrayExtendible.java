@@ -42,7 +42,7 @@ public class ArrayExtendible<T> {
 	
 	public T Recoger(int num) throws IndexOutOfBoundsException
 	{
-		if(num>0 && num<tamanio)
+		if(num>=0 && num<tamanio)
 			return t[num];
 		else
 			throw(new IndexOutOfBoundsException());

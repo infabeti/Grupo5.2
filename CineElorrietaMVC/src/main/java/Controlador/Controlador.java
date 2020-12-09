@@ -36,8 +36,8 @@ public class Controlador {
 		this.controladorPanelGeneros.mostrarPanelGeneros();
 	}
 
-	public void navegarPanelPelis() {
-		this.controladorPanelPelis.mostrarPanelPelis();
+	public void navegarPanelPelis(int Genero) {
+		this.controladorPanelPelis.mostrarPanelPelis(Genero);
 	}
 
 	public void navegarPanelFin() {

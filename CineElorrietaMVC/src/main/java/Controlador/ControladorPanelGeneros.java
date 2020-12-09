@@ -35,7 +35,7 @@ public class ControladorPanelGeneros {
 	}
 	
 	public void accionadoBottonGenroPanelGeneros(int Genero) {
-		this.controlador.navegarPanelPelis();
+		this.controlador.navegarPanelPelis(Genero);
 	}
 	
 	public void setCurrentDia(int iDia)
