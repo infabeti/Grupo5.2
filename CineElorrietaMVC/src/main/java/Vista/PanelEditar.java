@@ -11,25 +11,25 @@ import java.awt.Font;
 @SuppressWarnings("serial")
 public class PanelEditar extends JPanel {
 	private JTextField textField;
+	private JLabel lblNombrePeli ;
 	private ControladorPanelEditar controladorpaneleditar;
 
 	/**
 	 * Create the panel.
 	 */
 	public PanelEditar(ControladorPanelEditar controladorpaneleditar) {
-		this.controladorpaneleditar = controladorpaneleditar;
 		setLayout(null);
-		setBounds(100,100,500,400);
+		setBounds(150, 150, 530, 505);
 		
 		textField = new JTextField();
 		textField.setBounds(245, 77, 210, 92);
 		add(textField);
 		textField.setColumns(10);
 		
-		JLabel lblNewLabel = new JLabel("NOMBRE PELI");
-		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 30));
-		lblNewLabel.setBounds(10, 77, 224, 56);
-		add(lblNewLabel);
+		lblNombrePeli = new JLabel("NOMBRE PELI");
+		lblNombrePeli.setFont(new Font("Times New Roman", Font.BOLD, 30));
+		lblNombrePeli.setBounds(10, 77, 224, 56);
+		add(lblNombrePeli);
 		
 		JLabel lblGeneroPeli = new JLabel("GENERO PELI");
 		lblGeneroPeli.setFont(new Font("Times New Roman", Font.BOLD, 30));

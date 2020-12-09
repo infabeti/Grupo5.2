@@ -11,10 +11,9 @@ public class PanelFin extends JPanel{
 	private ControladorPanelFin controladorPanelFin;
 	
 	public PanelFin(ControladorPanelFin controladorPanelFin) {
-		this.controladorPanelFin = controladorPanelFin;
 		
 		setLayout(null);
-		setBounds(100,100,500,400);
+		setBounds(150, 150, 530, 505);
 		
 		lblFin = new JLabel("FIN");
 		lblFin.setFont(new Font("Times New Roman", Font.BOLD, 30));

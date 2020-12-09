@@ -16,10 +16,14 @@ import java.awt.event.ActionEvent;
 public class PanelLogin extends JPanel{
 	private JTextField txtFUsuario;
 	private JPasswordField txtFPasswd;
+	private JButton btnAceptar;
+	private JLabel lblUsuario;
+	private JLabel lblPassword;
+	private JLabel lblLogin;
 	private ControladorPanelLogin controladorpanellogin;
 	public PanelLogin(ControladorPanelLogin controladorpanellogin) {
 		setLayout(null);
-		setBounds(100,100,500,400);
+		setBounds(150, 150, 530, 505);
 		
 		txtFUsuario = new JTextField();
 		txtFUsuario.setBounds(230, 133, 118, 20);
@@ -31,7 +35,7 @@ public class PanelLogin extends JPanel{
 		add(txtFPasswd);
 		txtFPasswd.setColumns(10);
 		
-		JButton btnAceptar = new JButton("ACEPTAR");
+		btnAceptar = new JButton("ACEPTAR");
 		btnAceptar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				controladorpanellogin.accionadoBottonMostrarPanelGeneros(txtFUsuario.getText(),txtFPasswd.getPassword());
@@ -40,19 +44,19 @@ public class PanelLogin extends JPanel{
 		btnAceptar.setBounds(185, 284, 131, 43);
 		add(btnAceptar);
 		
-		JLabel lblNewLabel = new JLabel("USER");
-		lblNewLabel.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblNewLabel.setBounds(88, 133, 118, 23);
-		add(lblNewLabel);
+		lblUsuario = new JLabel("USER");
+		lblUsuario.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		lblUsuario.setBounds(88, 133, 118, 23);
+		add(lblUsuario);
 		
-		JLabel lblNewLabel_1 = new JLabel("PASSWORD");
-		lblNewLabel_1.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		lblNewLabel_1.setBounds(88, 201, 228, 27);
-		add(lblNewLabel_1);
+		lblPassword = new JLabel("PASSWORD");
+		lblPassword.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		lblPassword.setBounds(88, 201, 228, 27);
+		add(lblPassword);
 		
-		JLabel lblNewLabel_2 = new JLabel("LOGIN");
-		lblNewLabel_2.setFont(new Font("Times New Roman", Font.PLAIN, 30));
-		lblNewLabel_2.setBounds(200, 11, 205, 102);
-		add(lblNewLabel_2);
+		lblLogin = new JLabel("LOGIN");
+		lblLogin.setFont(new Font("Times New Roman", Font.PLAIN, 30));
+		lblLogin.setBounds(200, 11, 205, 102);
+		add(lblLogin);
 	}
 }
