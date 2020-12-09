@@ -1,0 +1,16 @@
+1;1;'Handia';116
+1;2;'La lista de Schindler';197
+1;3;'Cadena Perpetua';142
+1;4;'Million Dollar Baby';133
+2;5;'2001: Odisea en el espacio';142
+2;6;'La novia de Frankenstein';75
+2;7;'El planeta de los simios';115
+2;8;'Alien: el octavo pasajero';117
+3;9;'Scary movie';90
+3;10;'El gran Lebowsky';119
+3;11;'La vida de Brian';94
+3;12;'Aterriza como puedas';88
+4;13;'Psicosis';109
+4;14;'El resplandor';146
+4;15;'Dracula';155
+4;16;'Cisne negro';110
