@@ -19,6 +19,11 @@ public class ControladorPanelFin {
 	}
 
 	public void mostrarPanelFin() {
+		try {
+			Thread.sleep(2000);
+		} catch (Exception e) {
+			
+		}
 		this.panelFin = new PanelFin(this);
 		this.vista.mostrarPanel(this.panelFin);
 	}

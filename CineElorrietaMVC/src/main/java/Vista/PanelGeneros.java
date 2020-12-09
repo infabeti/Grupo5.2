@@ -15,14 +15,23 @@ public class PanelGeneros extends JPanel {
 
 	private JButton btnDrama;
 	private JLabel lblGeneros;
+	private JButton btnCienciaFiccion;
+	private JButton btnTerror;
+	private JButton btnComedia;
+	private JTextArea txtrPelisSeleccionadas;
+	private JLabel lblPelisSeleccionadas;
+	private JLabel lblHorasRestantes;
+	private JButton btnSabado;
+	private JButton btnDomingo;
+	private JButton btnContinuar;
+	private JButton btnVolver;
 	private ControladorPanelGeneros controladorPanelGeneros;
 	
 	public PanelGeneros(ControladorPanelGeneros controladorPanelGeneros)
 	{
-		this.controladorPanelGeneros = controladorPanelGeneros;
 		controladorPanelGeneros.setCurrentDia(0);
 		setLayout(null);
-		setBounds(100,100,500,400);
+		setBounds(150, 150, 530, 505);
 		
 		lblGeneros = new JLabel("SELECCION DE GENEROS");
 		lblGeneros.setFont(new Font("Times New Roman", Font.PLAIN, 30));
@@ -38,7 +47,7 @@ public class PanelGeneros extends JPanel {
 		});
 		add(btnDrama);
 		
-		JButton btnCienciaFiccion = new JButton("CIENCIA FICCION");
+		btnCienciaFiccion = new JButton("CIENCIA FICCION");
 		btnCienciaFiccion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				controladorPanelGeneros.accionadoBottonGenroPanelGeneros(2);
@@ -47,7 +56,7 @@ public class PanelGeneros extends JPanel {
 		btnCienciaFiccion.setBounds(8, 72, 169, 51);
 		add(btnCienciaFiccion);
 		
-		JButton btnTerror = new JButton("TERROR");
+		btnTerror = new JButton("TERROR");
 		btnTerror.setBounds(8, 196, 169, 51);
 		btnTerror.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -56,7 +65,7 @@ public class PanelGeneros extends JPanel {
 		});
 		add(btnTerror);
 		
-		JButton btnComedia = new JButton("COMEDIA");
+		btnComedia = new JButton("COMEDIA");
 		btnComedia.setBounds(8, 258, 169, 51);
 		btnComedia.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -65,39 +74,39 @@ public class PanelGeneros extends JPanel {
 		});
 		add(btnComedia);
 		
-		JTextArea txtrPelisSeleccionadas = new JTextArea();
-		txtrPelisSeleccionadas.setBounds(187, 107, 241, 202);
+		txtrPelisSeleccionadas = new JTextArea();
+		txtrPelisSeleccionadas.setBounds(205, 107, 295, 202);
 		add(txtrPelisSeleccionadas);
 		
-		JLabel lblNewLabel = new JLabel("PELIS SELECCIONADAS");
-		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		lblNewLabel.setBounds(224, 44, 276, 23);
-		add(lblNewLabel);
+		lblPelisSeleccionadas = new JLabel("PELIS SELECCIONADAS");
+		lblPelisSeleccionadas.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		lblPelisSeleccionadas.setBounds(224, 44, 276, 23);
+		add(lblPelisSeleccionadas);
 		
-		JLabel lblHorasRestantes = new JLabel("Horas restantes");
-		lblHorasRestantes.setBounds(223, 320, 177, 23);
+		lblHorasRestantes = new JLabel("Horas restantes");
+		lblHorasRestantes.setBounds(215, 327, 177, 23);
 		add(lblHorasRestantes);
 		
-		JButton btnSabado = new JButton("SABADO");
+		btnSabado = new JButton("SABADO");
 		btnSabado.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				controladorPanelGeneros.setCurrentDia(0);
 			}
 		});
-		btnSabado.setBounds(187, 73, 122, 23);
+		btnSabado.setBounds(200, 73, 122, 23);
 		add(btnSabado);
 		
-		JButton btnDomingo = new JButton("DOMINGO");
+		btnDomingo = new JButton("DOMINGO");
 		btnDomingo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				controladorPanelGeneros.setCurrentDia(1);
 			}
 		});
-		btnDomingo.setBounds(319, 73, 144, 23);
+		btnDomingo.setBounds(356, 72, 144, 23);
 		add(btnDomingo);
 		
-		JButton btnContinuar = new JButton("CONTINUAR");
-		btnContinuar.setBounds(362, 346, 93, 23);
+		btnContinuar = new JButton("CONTINUAR");
+		btnContinuar.setBounds(373, 422, 101, 23);
 		btnContinuar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				controladorPanelGeneros.accionadoBottonAceptarPanelGeneros();
@@ -105,8 +114,8 @@ public class PanelGeneros extends JPanel {
 		});
 		add(btnContinuar);
 		
-		JButton btnVolver = new JButton("VOLVER");
-		btnVolver.setBounds(8, 346, 93, 23);
+		btnVolver = new JButton("VOLVER");
+		btnVolver.setBounds(35, 422, 101, 23);
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				controladorPanelGeneros.accionadoBottonVolverPanelGeneros();
