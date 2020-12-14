@@ -7,7 +7,6 @@ import Modelo.ArrayExtendible;
 import Modelo.GestionPeliculas;
 import Modelo.Modelo;
 import Modelo.Pelicula;
-import Vista.PanelBienvenida;
 import Vista.PanelPelis;
 import Vista.Vista;
 
@@ -63,6 +62,10 @@ public class ControladorPanelPelis {
 			out+= i+ " - " + PelisGenero.Recoger(i).getNombre()+" "+this.modelo.formatearTiempoString(PelisGenero.Recoger(i).getMinutosDuracion())+"\n";
 		}
 		PelisTextAra.setText(out);
+	}
+	
+	PanelPelis makePanelPelis(ControladorPanelPelis controladorPeliculas) {
+		return new PanelPelis(controladorPeliculas);
 	}
 
 }

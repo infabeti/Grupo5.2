@@ -8,6 +8,7 @@ import Modelo.GestionDias;
 import Modelo.Modelo;
 import Modelo.Pelicula;
 import Vista.PanelBienvenida;
+import Vista.PanelFin;
 import Vista.PanelGeneros;
 import Vista.Vista;
 
@@ -64,5 +65,9 @@ public class ControladorPanelGeneros {
 			out+= (i+1)+ " - " + PelisHoy.Recoger(i).getNombre()+" "+this.modelo.formatearTiempoString(PelisHoy.Recoger(i).getMinutosDuracion())+"\n";
 		}
 		TextoPelis.setText(out);
+	}
+	
+	PanelGeneros makePanelGeneros(ControladorPanelGeneros controladorGeneros) {
+		return new PanelGeneros(controladorGeneros);
 	}
 }

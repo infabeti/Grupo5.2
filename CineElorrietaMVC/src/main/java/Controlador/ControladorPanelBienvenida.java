@@ -3,6 +3,7 @@ package Controlador;
 import Modelo.Modelo;
 import Vista.Vista;
 import Vista.PanelBienvenida;
+import Vista.PanelPelis;
 
 public class ControladorPanelBienvenida {
 
@@ -31,6 +32,10 @@ public class ControladorPanelBienvenida {
 			
 		}
 		this.controlador.navegarPanelLogin();
+	}
+	
+	PanelBienvenida makePanelBienvenida(ControladorPanelBienvenida controladorBienvenida) {
+		return new PanelBienvenida(controladorBienvenida);
 	}
 
 }

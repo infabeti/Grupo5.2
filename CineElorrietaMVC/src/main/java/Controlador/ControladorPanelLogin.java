@@ -3,6 +3,7 @@ package Controlador;
 import Modelo.GestionLogin;
 import Modelo.Modelo;
 import Vista.PanelBienvenida;
+import Vista.PanelGeneros;
 import Vista.PanelLogin;
 import Vista.Vista;
 
@@ -28,6 +29,10 @@ public class ControladorPanelLogin {
 	public void mostrarPanelLogin() {
 		this.panelLogin = new PanelLogin(this);
 		this.vista.mostrarPanel(this.panelLogin);
+	}
+	
+	PanelLogin makePanelLogin(ControladorPanelLogin controladorLogin) {
+		return new PanelLogin(controladorLogin);
 	}
 
 }

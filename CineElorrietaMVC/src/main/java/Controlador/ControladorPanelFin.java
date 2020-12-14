@@ -2,6 +2,7 @@ package Controlador;
 
 import Modelo.Modelo;
 import Vista.Vista;
+import Vista.PanelEditar;
 import Vista.PanelFin;
 
 public class ControladorPanelFin {
@@ -26,6 +27,10 @@ public class ControladorPanelFin {
 		}
 		this.panelFin = new PanelFin(this);
 		this.vista.mostrarPanel(this.panelFin);
+	}
+	
+	PanelFin makePanelFin(ControladorPanelFin controladorFin) {
+		return new PanelFin(controladorFin);
 	}
 
 }

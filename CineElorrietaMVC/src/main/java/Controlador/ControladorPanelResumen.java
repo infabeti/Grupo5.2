@@ -2,6 +2,7 @@ package Controlador;
 
 import Modelo.Modelo;
 import Vista.PanelBienvenida;
+import Vista.PanelPelis;
 import Vista.PanelResumen;
 import Vista.Vista;
 
@@ -30,6 +31,10 @@ public class ControladorPanelResumen {
 	public void mostrarPanelResumen() {
 		this.panelResumen = new PanelResumen(this);
 		this.vista.mostrarPanel(this.panelResumen);
+	}
+	
+	PanelResumen makePanelResumen(ControladorPanelResumen controladorResumen) {
+		return new PanelResumen(controladorResumen);
 	}
 
 }
