@@ -56,31 +56,31 @@ public class Controlador {
 		this.controladorPanelResumen.mostrarPanelResumen();
 	}
 	
-	ControladorPanelBienvenida makeControladorBienvenida(Modelo modelo, Vista vista, Controlador controlador) {
+	public ControladorPanelBienvenida makeControladorBienvenida(Modelo modelo, Vista vista, Controlador controlador) {
 		return new ControladorPanelBienvenida(this.modelo, this.vista, this);
 	}
 	
-	ControladorPanelGeneros makeControladorGeneros(Modelo modelo, Vista vista, Controlador controlador) {
+	public ControladorPanelGeneros makeControladorGeneros(Modelo modelo, Vista vista, Controlador controlador) {
 		return new ControladorPanelGeneros(this.modelo, this.vista, this);
 	}
 	
-	ControladorPanelPelis makeControladorPeliculas(Modelo modelo, Vista vista, Controlador controlador) {
+	public ControladorPanelPelis makeControladorPeliculas(Modelo modelo, Vista vista, Controlador controlador) {
 		return new ControladorPanelPelis(this.modelo, this.vista, this);
 	}
 	
-	ControladorPanelFin makeControladorFin(Modelo modelo, Vista vista, Controlador controlador) {
+	public ControladorPanelFin makeControladorFin(Modelo modelo, Vista vista, Controlador controlador) {
 		return new ControladorPanelFin(this.modelo, this.vista, this);
 	}
 	
-	ControladorPanelEditar makeControladorEditar(Modelo modelo, Vista vista, Controlador controlador) {
+	public ControladorPanelEditar makeControladorEditar(Modelo modelo, Vista vista, Controlador controlador) {
 		return new ControladorPanelEditar(this.modelo, this.vista, this);
 	}
 	
-	ControladorPanelLogin makeControladorLogin(Modelo modelo, Vista vista, Controlador controlador) {
+	public ControladorPanelLogin makeControladorLogin(Modelo modelo, Vista vista, Controlador controlador) {
 		return new ControladorPanelLogin(this.modelo, this.vista, this);
 	}
 	
-	ControladorPanelResumen makeControladorResumen(Modelo modelo, Vista vista, Controlador controlador) {
+	public ControladorPanelResumen makeControladorResumen(Modelo modelo, Vista vista, Controlador controlador) {
 		return new ControladorPanelResumen(this.modelo, this.vista, this);
 	}
 	
