@@ -70,4 +70,5 @@ public class ControladorPanelGeneros {
 	public PanelGeneros makePanelGeneros(ControladorPanelGeneros controladorGeneros) {
 		return new PanelGeneros(controladorGeneros);
 	}
+	
 }
