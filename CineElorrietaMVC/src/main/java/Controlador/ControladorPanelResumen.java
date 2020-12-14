@@ -1,6 +1,11 @@
 package Controlador;
 
+import javax.swing.JTextArea;
+
+import Modelo.ArrayExtendible;
+import Modelo.GestionDias;
 import Modelo.Modelo;
+import Modelo.Pelicula;
 import Vista.PanelBienvenida;
 import Vista.PanelPelis;
 import Vista.PanelResumen;
@@ -31,10 +36,28 @@ public class ControladorPanelResumen {
 	public void mostrarPanelResumen() {
 		this.panelResumen = new PanelResumen(this);
 		this.vista.mostrarPanel(this.panelResumen);
+		this.ActualizarTexto();
 	}
 	
-	PanelResumen makePanelResumen(ControladorPanelResumen controladorResumen) {
+	public PanelResumen makePanelResumen(ControladorPanelResumen controladorResumen) {
 		return new PanelResumen(controladorResumen);
+	}
+	
+	public void ActualizarTexto()
+	{
+		GestionDias GestorDias = this.modelo.getGestionDias();
+		JTextArea[] AreasTexto = panelResumen.getTextAreas();
+		for(int i=0;i<2;i++)
+		{
+			ArrayExtendible<Pelicula> PelisHoy = GestorDias.getDia(i).getPelisHoy();
+			String out="";
+			for(int y=0;y<PelisHoy.getTamanio();y++)
+			{
+				out+= (y+1)+ " - " + PelisHoy.Recoger(y).getNombre()+" "+this.modelo.formatearTiempoString(PelisHoy.Recoger(y).getMinutosDuracion())+"\n";
+			}
+			AreasTexto[i].setText(out);
+		}
+		
 	}
 
 }

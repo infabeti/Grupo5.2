@@ -64,4 +64,10 @@ public class PanelResumen extends JPanel{
 			}
 		});
 	}
+	
+	public JTextArea[] getTextAreas()
+	{
+		JTextArea[] ListaTextos = {txtASabado, txtADomingo};
+		return ListaTextos;
+	}
 }
