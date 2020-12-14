@@ -7,7 +7,7 @@ public class Dia {
 	private int MinutosProyeccion;
 	private ArrayExtendible<Pelicula> PelisHoy;
 	
-	Dia(int iMaxMins)
+	public Dia(int iMaxMins)
 	{
 		PelisHoy = new ArrayExtendible<Pelicula>();
 		MinutosProyeccion = iMaxMins;

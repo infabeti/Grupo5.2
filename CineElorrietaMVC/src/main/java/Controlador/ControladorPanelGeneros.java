@@ -1,6 +1,12 @@
 package Controlador;
 
+import javax.swing.JLabel;
+import javax.swing.JTextArea;
+
+import Modelo.ArrayExtendible;
+import Modelo.GestionDias;
 import Modelo.Modelo;
+import Modelo.Pelicula;
 import Vista.PanelBienvenida;
 import Vista.PanelGeneros;
 import Vista.Vista;
@@ -12,18 +18,19 @@ public class ControladorPanelGeneros {
 	private Vista vista;
 	private Controlador controlador;
 	private PanelGeneros panelGeneros;
-	private int CurrentDia;
 	
 	public ControladorPanelGeneros(Modelo modelo, Vista vista, Controlador controlador) {
 		this.modelo = modelo;
 		this.vista = vista;
 		this.controlador = controlador;	
-		CurrentDia=0;
+		
 	}
 	
 	public void mostrarPanelGeneros() {
 		this.panelGeneros = new PanelGeneros(this);
 		this.vista.mostrarPanel(this.panelGeneros);
+		this.ActualizarTexto();
+		this.setCurrentDia(0);
 	}
 	
 	public void accionadoBottonVolverPanelGeneros() {
@@ -40,7 +47,22 @@ public class ControladorPanelGeneros {
 	
 	public void setCurrentDia(int iDia)
 	{
-		CurrentDia = iDia;
+		this.modelo.getGestionDias().SetDia(iDia);
+		this.ActualizarTexto();
 	}
 	
+	public void ActualizarTexto()
+	{
+		JTextArea TextoPelis = panelGeneros.GetTextArea();
+		JLabel HoraLabel = panelGeneros.getLabelHoras();
+		GestionDias GestorDias = this.modelo.getGestionDias();
+		HoraLabel.setText("Horas restantes: "+this.modelo.formatearTiempoString(GestorDias.getDia(GestorDias.GetSelectedDia()).MinutosRestantes()));
+		ArrayExtendible<Pelicula> PelisHoy = GestorDias.getDia(GestorDias.GetSelectedDia()).getPelisHoy();
+		String out="";
+		for(int i=0;i<PelisHoy.getTamanio();i++)
+		{
+			out+= (i+1)+ " - " + PelisHoy.Recoger(i).getNombre()+" "+this.modelo.formatearTiempoString(PelisHoy.Recoger(i).getMinutosDuracion())+"\n";
+		}
+		TextoPelis.setText(out);
+	}
 }

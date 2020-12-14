@@ -19,6 +19,7 @@ public class ControladorPanelPelis {
 	private Controlador controlador;
 	private PanelPelis panelPelis;
 	private int Genero;
+	private ArrayExtendible<Pelicula> PelisGenero;
 	
 	public ControladorPanelPelis(Modelo modelo, Vista vista, Controlador controlador) {
 		this.modelo = modelo;
@@ -31,22 +32,30 @@ public class ControladorPanelPelis {
 	}
 	
 	public void accionadoBottonAceptarPanelPelis() {
-		this.controlador.navegarPanelResumen();
+		JComboBox<Integer> GetPanelCombo = panelPelis.GetPanelCombo();
+		int elegida = GetPanelCombo.getSelectedIndex();
+		this.modelo.getGestionDias().AnadirPelicula(PelisGenero.Recoger(elegida));
+		this.controlador.navegarPanelGeneros();
 	}
 
 	public void mostrarPanelPelis(int Genero) {
 		this.panelPelis = new PanelPelis(this);
 		this.Genero = Genero;
 		this.vista.mostrarPanel(this.panelPelis);
+		this.GetPelis();
 		this.MostrarPelis();
+	}
+	
+	public void GetPelis()
+	{
+		GestionPeliculas GP = this.modelo.getGestorPelis();
+		PelisGenero = GP.GetPelisPorGenero(this.Genero);
 	}
 	
 	public void MostrarPelis()
 	{
-		GestionPeliculas GP = this.modelo.getGestorPelis();
 		JTextArea PelisTextAra = panelPelis.GetTxtAreaPelis();
 		JComboBox<Integer> ComboPelis = panelPelis.GetPanelCombo();
-		ArrayExtendible<Pelicula> PelisGenero = GP.GetPelisPorGenero(this.Genero);
 		String out="";
 		for(int i=0;i<PelisGenero.getTamanio();i++)
 		{

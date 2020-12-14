@@ -29,7 +29,7 @@ public class PanelGeneros extends JPanel {
 	
 	public PanelGeneros(ControladorPanelGeneros controladorPanelGeneros)
 	{
-		controladorPanelGeneros.setCurrentDia(0);
+		
 		setLayout(null);
 		setBounds(150, 150, 530, 505);
 		
@@ -83,7 +83,7 @@ public class PanelGeneros extends JPanel {
 		lblPelisSeleccionadas.setBounds(224, 44, 276, 23);
 		add(lblPelisSeleccionadas);
 		
-		lblHorasRestantes = new JLabel("Horas restantes");
+		lblHorasRestantes = new JLabel("Horas restantes:");
 		lblHorasRestantes.setBounds(215, 327, 177, 23);
 		add(lblHorasRestantes);
 		
@@ -123,5 +123,17 @@ public class PanelGeneros extends JPanel {
 		});
 		add(btnVolver);
 		
+		
 	}
+	
+	public JTextArea GetTextArea()
+	{
+		return txtrPelisSeleccionadas;
+	}
+	
+	public JLabel getLabelHoras()
+	{
+		return lblHorasRestantes;
+	}
+	
 }
