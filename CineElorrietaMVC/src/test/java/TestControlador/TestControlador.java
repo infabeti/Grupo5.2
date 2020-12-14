@@ -42,7 +42,7 @@ public class TestControlador {
 	@Test
 	public void testNavegarPanelPelis(int genero) {
 		spyControlador = spy(new Controlador(modeloMock, vistaMock));
-		doReturn(controladorPelisMock).when(spyControlador).makeControladorPelis(any(Modelo.class),
+		doReturn(controladorPelisMock).when(spyControlador).makeControladorPeliculas(any(Modelo.class),
 				any(Vista.class), any(Controlador.class));
 
 		spyControlador.navegarPanelPelis(2);

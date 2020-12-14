@@ -67,7 +67,7 @@ public class ControladorPanelGeneros {
 		TextoPelis.setText(out);
 	}
 	
-	PanelGeneros makePanelGeneros(ControladorPanelGeneros controladorGeneros) {
+	public PanelGeneros makePanelGeneros(ControladorPanelGeneros controladorGeneros) {
 		return new PanelGeneros(controladorGeneros);
 	}
 }

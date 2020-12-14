@@ -2,8 +2,7 @@ package Controlador;
 
 import Modelo.Modelo;
 import Vista.Vista;
-import Vista.PanelEditar;
-import Vista.PanelFin;
+import Vista.*;
 
 public class ControladorPanelFin {
 
@@ -12,6 +11,7 @@ public class ControladorPanelFin {
 	private Vista vista;
 	private Controlador controlador;
 	private PanelFin panelFin;
+	private PanelBienvenida panelBienvenida;
 
 	public ControladorPanelFin(Modelo modelo, Vista vista, Controlador controlador) {
 		this.modelo = modelo;
@@ -20,16 +20,17 @@ public class ControladorPanelFin {
 	}
 
 	public void mostrarPanelFin() {
+		this.panelFin = new PanelFin(this);
+		this.vista.mostrarPanel(this.panelFin);
 		try {
 			Thread.sleep(2000);
 		} catch (Exception e) {
 			
 		}
-		this.panelFin = new PanelFin(this);
-		this.vista.mostrarPanel(this.panelFin);
+		this.controlador.navegarPanelBienvenida();
 	}
 	
-	PanelFin makePanelFin(ControladorPanelFin controladorFin) {
+	public PanelFin makePanelFin(ControladorPanelFin controladorFin) {
 		return new PanelFin(controladorFin);
 	}
 

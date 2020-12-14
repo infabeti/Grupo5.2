@@ -64,7 +64,7 @@ public class ControladorPanelPelis {
 		PelisTextAra.setText(out);
 	}
 	
-	PanelPelis makePanelPelis(ControladorPanelPelis controladorPeliculas) {
+	public PanelPelis makePanelPelis(ControladorPanelPelis controladorPeliculas) {
 		return new PanelPelis(controladorPeliculas);
 	}
 

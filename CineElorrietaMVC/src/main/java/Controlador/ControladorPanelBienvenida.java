@@ -34,7 +34,7 @@ public class ControladorPanelBienvenida {
 		this.controlador.navegarPanelLogin();
 	}
 	
-	PanelBienvenida makePanelBienvenida(ControladorPanelBienvenida controladorBienvenida) {
+	public PanelBienvenida makePanelBienvenida(ControladorPanelBienvenida controladorBienvenida) {
 		return new PanelBienvenida(controladorBienvenida);
 	}
 

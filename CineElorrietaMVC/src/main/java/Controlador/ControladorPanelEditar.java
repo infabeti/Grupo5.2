@@ -28,7 +28,7 @@ public class ControladorPanelEditar{
 		this.controlador.navegarPanelEditar();
 	}
 	
-	PanelEditar makePanelEditar(ControladorPanelEditar controladorEditar) {
+	public PanelEditar makePanelEditar(ControladorPanelEditar controladorEditar) {
 		return new PanelEditar(controladorEditar);
 	}
 	
