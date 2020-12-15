@@ -33,7 +33,19 @@ public class ControladorPanelPelis {
 	public void accionadoBottonAceptarPanelPelis() {
 		JComboBox<Integer> GetPanelCombo = panelPelis.GetPanelCombo();
 		int elegida = GetPanelCombo.getSelectedIndex();
-		this.modelo.getGestionDias().AnadirPelicula(PelisGenero.Recoger(elegida));
+		int resultado = this.modelo.getGestionDias().AnadirPelicula(PelisGenero.Recoger(elegida));
+		switch(resultado)
+		{
+			case 1:
+				this.controlador.LogearErrorUsuario("ERROR AL INSERTAR PELICULA", "La pelicula no puede ser insertada en el dia elegido, y en el otro dia existe una del mismo genero");
+				break;
+			case 2:
+				this.controlador.LogearErrorUsuario("ERROR AL INSERTAR PELICULA", "La pelicula no puede ser insertada en el dia elegido, y ha sido insertada en el otro dia");
+				break;
+			case 3:
+				this.controlador.LogearErrorUsuario("ERROR AL INSERTAR PELICULA", "La pelicula no puede ser insertada en el dia elegido, y no hay tiempo para insertarla en el otro dia");
+				break;
+		}
 		this.controlador.navegarPanelGeneros();
 	}
 

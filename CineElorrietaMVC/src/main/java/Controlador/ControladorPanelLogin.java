@@ -23,7 +23,12 @@ public class ControladorPanelLogin {
 	public void accionadoBottonMostrarPanelGeneros(String user, char[] password) {
 		int result = this.modelo.getGestorLogin().compararContrasenas(user, password);
 		if(result != 0)
+		{
 			this.controlador.navegarPanelGeneros();
+			this.modelo.getGestionDias().GenerarNuevosDias();
+		}
+		else
+			this.controlador.LogearErrorUsuario("ERROR LOGIN", "Se ha insertado un usuario y contraseña equivocadas");
 	}
 
 	public void mostrarPanelLogin() {

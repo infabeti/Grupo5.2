@@ -14,6 +14,7 @@ public class Controlador {
 	private ControladorPanelFin controladorPanelFin;
 	private ControladorPanelLogin controladorPanelLogin;
 	private ControladorPanelResumen controladorPanelResumen;
+	private ControladorLoger controladorLoger;
 
 	public Controlador(Modelo modelo, Vista vista) {
 		this.modelo = modelo;
@@ -25,6 +26,7 @@ public class Controlador {
 		this.controladorPanelFin = new ControladorPanelFin(this.modelo, this.vista, this);
 		this.controladorPanelEditar = new ControladorPanelEditar(this.modelo, this.vista, this);
 		this.controladorPanelResumen = new ControladorPanelResumen(this.modelo, this.vista, this);
+		this.controladorLoger = new ControladorLoger();
 		this.navegarPanelBienvenida();
 	}
 
@@ -84,6 +86,9 @@ public class Controlador {
 		return new ControladorPanelResumen(this.modelo, this.vista, this);
 	}
 	
-	
+	public void LogearErrorUsuario(String Nombre, String Descripcion)
+	{
+		this.controladorLoger.EscribirErrorUser(Nombre, Descripcion);
+	}
 
 }

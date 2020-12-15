@@ -29,7 +29,7 @@ public class GestionDias {
 		ListaDias[1] = new Dia(360);
 	}
 	
-	public void AnadirPelicula(Pelicula inPeli)
+	public int AnadirPelicula(Pelicula inPeli)
 	{
 		if(ListaDias[DiaSeleccionado].CabePeli(inPeli.getMinutosDuracion()))
 		{
@@ -42,20 +42,21 @@ public class GestionDias {
 						    "Ya existe una peli del mismo genero en el mismo, la peli no sera insertada",
 						    "AVISO.",
 						    JOptionPane.WARNING_MESSAGE);
-					AnadirPeliOtroDia(inPeli);
-					return;
+					
+					
+					return AnadirPeliOtroDia(inPeli);
 				}
 			}
 			ListaDias[DiaSeleccionado].AnadirPelicula(inPeli);
-			return;
+			return 0;
 		}
 		JOptionPane.showMessageDialog(null,
 			    "La peli elegida no cabe en el dia selecciano, probando el otro",
 			    "AVISO.",
 			    JOptionPane.WARNING_MESSAGE);
-		AnadirPeliOtroDia(inPeli);
+		return AnadirPeliOtroDia(inPeli);
 	}
-	public void AnadirPeliOtroDia(Pelicula inPeli)
+	public int AnadirPeliOtroDia(Pelicula inPeli)
 	{
 		
 		if(DiaSeleccionado==0)
@@ -71,11 +72,11 @@ public class GestionDias {
 							    "Ya existe una peli del mismo genero en el otro dia, la peli no sera insertada",
 							    "AVISO.",
 							    JOptionPane.WARNING_MESSAGE);
-						return;
+						return 1;
 					}
 				}
 				ListaDias[1].AnadirPelicula(inPeli);
-				return;
+				return 2;
 			}
 		}
 		else
@@ -91,17 +92,18 @@ public class GestionDias {
 							    "Ya existe una peli del mismo genero en el otro dia, la peli no sera insertada",
 							    "AVISO.",
 							    JOptionPane.WARNING_MESSAGE);
-						return;
+						return 1;
 					}
 				}
 				ListaDias[0].AnadirPelicula(inPeli);
-				return;
+				return 2;
 			}
 		}
 		JOptionPane.showMessageDialog(null,
 			    "La peli elegida no cabe en otro dia, no sera insertada",
 			    "AVISO.",
 			    JOptionPane.WARNING_MESSAGE);
+		return 3;
 	}
 	
 	
