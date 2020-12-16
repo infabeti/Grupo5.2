@@ -21,7 +21,7 @@ public class ControladorPanelLogin {
 	}
 	
 	public void accionadoBottonMostrarPanelGeneros(String user, char[] password) {
-		int result = this.modelo.getGestorLogin().compararContrasenas(user, password);
+		int result = this.modelo.getGestorLogin().probarLogin(user, password);
 		if(result != 0)
 		{
 			this.controlador.navegarPanelGeneros();

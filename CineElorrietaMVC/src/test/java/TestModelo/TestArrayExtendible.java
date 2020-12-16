@@ -23,7 +23,9 @@ public class TestArrayExtendible {
 		AE.Anadir(1);
 		AE.Anadir(2);
 		AE.Anadir(3);
+		assertEquals(1, AE.Recoger(0).intValue());
 		assertEquals(2, AE.Recoger(1).intValue());
+		assertEquals(3, AE.Recoger(2).intValue());
 	}
 	
 	@Test(expected = IndexOutOfBoundsException.class)
@@ -42,6 +44,7 @@ public class TestArrayExtendible {
 		AE.Anadir(2);
 		AE.Anadir(3);
 		AE.Eliminar(1);
+		assertEquals(1, AE.Recoger(0).intValue());
 		assertEquals(3, AE.Recoger(1).intValue());
 	}
 	
@@ -54,7 +57,7 @@ public class TestArrayExtendible {
 			AE.Anadir(i+1);
 			L[i]=i+1;
 		}
-		assertArrayEquals(L, AE.ConseguirArray());;
+		assertArrayEquals(L, AE.ConseguirArray());
 	}
 
 }

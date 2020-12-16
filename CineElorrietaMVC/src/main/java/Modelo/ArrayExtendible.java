@@ -40,13 +40,11 @@ public class ArrayExtendible<T> {
 		
 	}
 	
-	public T Recoger(int num) throws IndexOutOfBoundsException
+	public T Recoger(int num) 
 	{
-		if(num>=0 && num<tamanio)
+		
 			return t[num];
-		else
-			throw(new IndexOutOfBoundsException());
-	}
+			}
 	
 	public T[] ConseguirArray()
 	{
