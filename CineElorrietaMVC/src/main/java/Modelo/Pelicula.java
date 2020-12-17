@@ -43,7 +43,7 @@ public class Pelicula {
 	}
 
 	public void setNombre(String nombre) {
-		Nombre = nombre;
+		Nombre = "'"+nombre+"'";
 	}
 
 	public int getMinutosDuracion() {
@@ -56,7 +56,7 @@ public class Pelicula {
 
 	@Override
 	public String toString() {
-		return codigoGenero + "*" + codigoPeli + "*" + Nombre
-				+ "*" + minutosDuracion;
+		return codigoGenero + ";" + codigoPeli + ";" + Nombre
+				+ ";" + minutosDuracion;
 	}
 }

@@ -10,14 +10,13 @@ import Modelo.Pelicula;
 
 public class TestDia {
 	private int MinutosProyeccion = 480;
-	private ArrayExtendible<Pelicula> PelisHoy;
 	private Dia dia = new Dia(MinutosProyeccion);
 
 	@Test
 	public void testAnadirPeliculas() {
-		Pelicula peli = new Pelicula(1, 1, "Handia", 116);
-		PelisHoy.Anadir(peli);
-		assertEquals(PelisHoy.Recoger(0), peli);
+		Pelicula peli = new Pelicula(1, 1, "'Handia'", 116);
+		dia.AnadirPelicula(peli);
+		assertEquals(dia.getPelisHoy().Recoger(0), peli);
 	}
 
 	@Test
