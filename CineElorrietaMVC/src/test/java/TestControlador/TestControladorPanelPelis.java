@@ -54,7 +54,6 @@ public class TestControladorPanelPelis {
 		controladorPelis = new ControladorPanelPelis(modeloMock, vistaMock, controladorMock);
 
 		spyControladorPelis.accionadoBottonAceptarPanelPelis();
-
 	}
 	
 	@Test
