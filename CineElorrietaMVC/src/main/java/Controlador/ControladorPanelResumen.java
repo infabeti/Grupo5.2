@@ -34,7 +34,7 @@ public class ControladorPanelResumen {
 	}
 	
 	public void mostrarPanelResumen() {
-		this.panelResumen = new PanelResumen(this);
+		this.panelResumen = makePanelResumen(this);
 		this.vista.mostrarPanel(this.panelResumen);
 		this.ActualizarTexto();
 	}

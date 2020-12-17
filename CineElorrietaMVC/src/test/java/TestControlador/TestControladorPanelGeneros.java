@@ -1,5 +1,6 @@
 package TestControlador;
 
+import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
@@ -56,9 +57,20 @@ public class TestControladorPanelGeneros {
 	public void accionadoBottonGenroPanelGeneros() {
 		controladorGeneros = new ControladorPanelGeneros(modeloMock, vistaMock, controladorMock);
 
-		controladorGeneros.accionadoBottonAceptarPanelGeneros();
+		controladorGeneros.accionadoBottonGenroPanelGeneros(0);
 
-		verify(controladorMock, times(1)).navegarPanelPelis(1);
+		verify(controladorMock, times(1)).navegarPanelPelis(0);
+	}
+	
+	@Test
+	public void testSetCurrentDia() {
+		int dia = 1;
+		
+		controladorGeneros = new ControladorPanelGeneros(modeloMock, vistaMock, controladorMock);
+		
+		controladorGeneros.setCurrentDia(dia);
+
+		verify(modeloMock, times(1)).getGestionDias().SetDia(dia);
 	}
 
 }

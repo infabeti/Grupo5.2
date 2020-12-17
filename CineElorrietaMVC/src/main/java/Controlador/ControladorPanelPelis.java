@@ -50,7 +50,7 @@ public class ControladorPanelPelis {
 	}
 
 	public void mostrarPanelPelis(int Genero) {
-		this.panelPelis = new PanelPelis(this);
+		this.panelPelis = makePanelPelis(this);
 		this.Genero = Genero;
 		this.vista.mostrarPanel(this.panelPelis);
 		this.GetPelis();

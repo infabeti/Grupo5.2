@@ -1,4 +1,4 @@
-package Vista;
+/*package Vista;
 
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -14,9 +14,7 @@ public class PanelEditar extends JPanel {
 	private JLabel lblNombrePeli ;
 	private ControladorPanelEditar controladorpaneleditar;
 
-	/**
-	 * Create the panel.
-	 */
+	
 	public PanelEditar(ControladorPanelEditar controladorpaneleditar) {
 		setLayout(null);
 		setBounds(150, 150, 530, 505);
@@ -38,4 +36,4 @@ public class PanelEditar extends JPanel {
 
 	}
 
-}
+}*/

@@ -28,7 +28,7 @@ public class ControladorPanelGeneros {
 	}
 	
 	public void mostrarPanelGeneros() {
-		this.panelGeneros = new PanelGeneros(this);
+		this.panelGeneros = makePanelGeneros(this);
 		this.vista.mostrarPanel(this.panelGeneros);
 		this.ActualizarTexto();
 		this.setCurrentDia(0);
@@ -56,6 +56,7 @@ public class ControladorPanelGeneros {
 	{
 		JTextArea TextoPelis = panelGeneros.GetTextArea();
 		JLabel HoraLabel = panelGeneros.getLabelHoras();
+		modelo = new Modelo();
 		GestionDias GestorDias = this.modelo.getGestionDias();
 		HoraLabel.setText("Horas restantes: "+this.modelo.formatearTiempoString(GestorDias.getDia(GestorDias.GetSelectedDia()).MinutosRestantes()));
 		ArrayExtendible<Pelicula> PelisHoy = GestorDias.getDia(GestorDias.GetSelectedDia()).getPelisHoy();

@@ -20,7 +20,7 @@ public class ControladorPanelFin {
 	}
 
 	public void mostrarPanelFin() {
-		this.panelFin = new PanelFin(this);
+		this.panelFin = makePanelFin(this);
 		this.vista.mostrarPanel(this.panelFin);
 		try {
 			Thread.sleep(2000);

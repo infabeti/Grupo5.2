@@ -1,4 +1,4 @@
-package Controlador;
+/*package Controlador;
 
 import Modelo.Modelo;
 import Vista.Vista;
@@ -20,7 +20,7 @@ public class ControladorPanelEditar{
 	}
 	
 	public void mostrarPanelEditar() {
-		this.panelEditar = new PanelEditar(this);
+		this.panelEditar = makePanelEditar(this);
 		this.vista.mostrarPanel(this.panelEditar);
 	}
 	
@@ -33,3 +33,4 @@ public class ControladorPanelEditar{
 	}
 	
 }
+*/

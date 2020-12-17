@@ -17,7 +17,6 @@ import Vista.Vista;
 
 public class TestControladorPanelFin {
 
-	private ControladorPanelFin controladorFin;
 	private Modelo modeloMock = mock(Modelo.class);
 	private Vista vistaMock = mock(Vista.class);
 	private Controlador controladorMock = mock(Controlador.class);

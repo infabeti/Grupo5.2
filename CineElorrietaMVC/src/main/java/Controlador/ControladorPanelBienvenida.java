@@ -20,7 +20,7 @@ public class ControladorPanelBienvenida {
 	}
 
 	public void mostrarPanelBienvenida() {
-		this.panelBienvenida = new PanelBienvenida(this);
+		this.panelBienvenida = makePanelBienvenida(this);
 		this.vista.mostrarPanel(this.panelBienvenida);
 		accionadoBottonMostrarPanelLogin();
 	}

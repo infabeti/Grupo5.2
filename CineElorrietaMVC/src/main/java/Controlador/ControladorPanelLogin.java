@@ -32,7 +32,7 @@ public class ControladorPanelLogin {
 	}
 
 	public void mostrarPanelLogin() {
-		this.panelLogin = new PanelLogin(this);
+		this.panelLogin = makePanelLogin(this);
 		this.vista.mostrarPanel(this.panelLogin);
 	}
 	

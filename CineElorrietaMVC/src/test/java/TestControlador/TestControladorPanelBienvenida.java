@@ -20,7 +20,9 @@ public class TestControladorPanelBienvenida {
 
 	@Test
 	public void mostrarPanelBienvenida() {
-		doReturn(panelBienvenidaMock).when(spyControladorBienvenida).makePanelBienvenida(any(ControladorPanelBienvenida.class));
+		doReturn(panelBienvenidaMock)
+			.when(spyControladorBienvenida)
+			.makePanelBienvenida(any(ControladorPanelBienvenida.class));
 
 		spyControladorBienvenida.mostrarPanelBienvenida();
 		verify(vistaMock, times(1)).mostrarPanel(panelBienvenidaMock);

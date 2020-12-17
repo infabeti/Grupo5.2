@@ -18,6 +18,7 @@ public class TestControlador {
 	private ControladorPanelPelis controladorPelisMock = mock(ControladorPanelPelis.class);
 	private ControladorPanelResumen controladorResumenMock = mock(ControladorPanelResumen.class);
 	private ControladorPanelFin controladorFinMock = mock(ControladorPanelFin.class);
+	private ControladorLoger controladorLogMock = mock(ControladorLoger.class);
 
 	@Test
 	public void testNavegarPanelLogin() {
@@ -40,7 +41,7 @@ public class TestControlador {
 	}
 
 	@Test
-	public void testNavegarPanelPelis(int genero) {
+	public void testNavegarPanelPelis() {
 		spyControlador = spy(new Controlador(modeloMock, vistaMock));
 		doReturn(controladorPelisMock).when(spyControlador).makeControladorPeliculas(any(Modelo.class),
 				any(Vista.class), any(Controlador.class));
@@ -67,6 +68,17 @@ public class TestControlador {
 
 		spyControlador.navegarPanelFin();
 		verify(spyControlador, times(1)).navegarPanelFin();
+	}
+	
+	@Test
+	public void logearErrorUsuario() {
+		String nombre = "pepe";
+		String descripcion = "Error al iniciar sesion";
+		spyControlador = spy(new Controlador(modeloMock, vistaMock));
+		doReturn(controladorLogMock).when(spyControlador).makeControladorLoger();
+		
+		spyControlador.LogearErrorUsuario(nombre, descripcion);
+		verify(spyControlador, times(1)).LogearErrorUsuario(nombre, descripcion);
 	}
 
 }
