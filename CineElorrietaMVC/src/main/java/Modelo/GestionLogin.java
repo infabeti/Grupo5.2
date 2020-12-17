@@ -16,7 +16,7 @@ public class GestionLogin {
 		Contrasenas[1] = "contra".toCharArray();
 	}
 	
-	public int compararContrasenas(String inUsuario,char[] inContrasena)
+	public int probarLogin(String inUsuario,char[] inContrasena)
 	{
 		for(int i=0;i<2;i++)
 		{
