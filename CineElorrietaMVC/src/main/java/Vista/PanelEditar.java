@@ -1,47 +1,89 @@
 package Vista;
 
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 
-import Controlador.ControladorPanelEditar;
-
+import Controlador.ControladorPanelAdminPelis;
 import javax.swing.JLabel;
 import java.awt.Font;
-import javax.swing.JTextArea;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-@SuppressWarnings("serial")
 public class PanelEditar extends JPanel {
-	private ControladorPanelEditar controladorpaneleditar;
-
+	private ControladorPanelAdminPelis controladoradminpelis;
+	private JTextField txtFGenero;
+	private JTextField txtFTitulo;
+	private JTextField txtFDuracion;
+	private JLabel lblNewLabel;
+	private JComboBox comboBox;
+	private JLabel lblTitulo;
+	private JLabel lblGenero;
+	private JLabel lblDuracion;
+	private JButton btnVolver;
+	private JButton btnAceptar;
 	
-	public PanelEditar(ControladorPanelEditar controladorpaneleditar) {
+	public PanelEditar(ControladorPanelAdminPelis controladoradminpelis) {
 		setBounds(150, 150, 530, 505);
 		setLayout(null);
 		
-		JTextArea textArea = new JTextArea();
-		textArea.setBounds(26, 46, 472, 303);
-		add(textArea);
+		lblNewLabel = new JLabel("Codigo:");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel.setBounds(52, 74, 75, 28);
+		add(lblNewLabel);
 		
-		JButton btnAtras = new JButton("Atras");
-		btnAtras.setBounds(27, 400, 89, 54);
-		add(btnAtras);
+		comboBox = new JComboBox();
+		comboBox.setBounds(151, 74, 121, 27);
+		add(comboBox);
 		
-		JButton btnEditar = new JButton("Editar");
-		btnEditar.setBounds(126, 400, 89, 54);
-		add(btnEditar);
+		lblTitulo = new JLabel("Titulo:");
+		lblTitulo.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblTitulo.setBounds(52, 224, 75, 28);
+		add(lblTitulo);
 		
-		JButton btnEliminar = new JButton("Eliminar");
-		btnEliminar.setBounds(225, 400, 89, 54);
-		add(btnEliminar);
+		lblGenero = new JLabel("Genero:");
+		lblGenero.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblGenero.setBounds(52, 147, 75, 28);
+		add(lblGenero);
 		
-		JButton btnAñadir = new JButton("A\u00F1adir");
-		btnAñadir.setBounds(324, 400, 89, 54);
-		add(btnAñadir);
+		lblDuracion = new JLabel("Duracion:");
+		lblDuracion.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblDuracion.setBounds(52, 310, 75, 28);
+		add(lblDuracion);
 		
-		JButton btnGuardar = new JButton("Guardar");
-		btnGuardar.setBounds(423, 400, 89, 54);
-		add(btnGuardar);
-
+		txtFGenero = new JTextField();
+		txtFGenero.setBounds(151, 147, 169, 26);
+		add(txtFGenero);
+		txtFGenero.setColumns(10);
+		
+		txtFTitulo = new JTextField();
+		txtFTitulo.setColumns(10);
+		txtFTitulo.setBounds(151, 226, 169, 26);
+		add(txtFTitulo);
+		
+		txtFDuracion = new JTextField();
+		txtFDuracion.setColumns(10);
+		txtFDuracion.setBounds(151, 312, 169, 26);
+		add(txtFDuracion);
+		
+		btnVolver = new JButton("Volver");
+		btnVolver.setBounds(52, 414, 96, 35);
+		add(btnVolver);
+		
+		btnAceptar = new JButton("Aceptar");
+		btnAceptar.setBounds(381, 414, 96, 35);
+		add(btnAceptar);
+		
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		
+		btnAceptar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		
 	}
 }

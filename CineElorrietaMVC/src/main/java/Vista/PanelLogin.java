@@ -21,6 +21,7 @@ public class PanelLogin extends JPanel{
 	private JLabel lblPassword;
 	private JLabel lblLogin;
 	private ControladorPanelLogin controladorpanellogin;
+	
 	public PanelLogin(ControladorPanelLogin controladorpanellogin) {
 		setLayout(null);
 		setBounds(150, 150, 530, 505);

@@ -15,6 +15,7 @@ public class Controlador {
 	private ControladorPanelLogin controladorPanelLogin;
 	private ControladorPanelResumen controladorPanelResumen;
 	private ControladorLoger controladorLoger;
+	private ControladorPanelAdminPelis controladorPanelAdminPelis;
 
 	public Controlador(Modelo modelo, Vista vista) {
 		this.modelo = modelo;
@@ -24,8 +25,9 @@ public class Controlador {
 		this.controladorPanelLogin = makeControladorLogin(this.modelo, this.vista, this);
 		this.controladorPanelPelis = makeControladorPeliculas(this.modelo, this.vista, this);
 		this.controladorPanelFin = makeControladorFin(this.modelo, this.vista, this);
-		this.controladorPanelEditar = new ControladorPanelEditar(this.modelo, this.vista, this);
+		this.controladorPanelEditar = makeControladorEditar(this.modelo, this.vista, this);
 		this.controladorPanelResumen = makeControladorResumen(this.modelo, this.vista, this);
+		this.controladorPanelAdminPelis = makeControladorAdminPelis(this.modelo, this.vista, this);
 		this.controladorLoger = makeControladorLoger();
 		this.navegarPanelBienvenida();
 	}
@@ -58,6 +60,10 @@ public class Controlador {
 		this.controladorPanelResumen.mostrarPanelResumen();
 	}
 	
+	public void navegarPanelAdminPelis() {
+		this.controladorPanelAdminPelis.mostrarPanelAdminPelis();
+	}
+	
 	public ControladorPanelBienvenida makeControladorBienvenida(Modelo modelo, Vista vista, Controlador controlador) {
 		return new ControladorPanelBienvenida(this.modelo, this.vista, this);
 	}
@@ -84,6 +90,10 @@ public class Controlador {
 	
 	public ControladorPanelResumen makeControladorResumen(Modelo modelo, Vista vista, Controlador controlador) {
 		return new ControladorPanelResumen(this.modelo, this.vista, this);
+	}
+	
+	public ControladorPanelAdminPelis makeControladorAdminPelis(Modelo modelo, Vista vista, Controlador controlador) {
+		return new ControladorPanelAdminPelis(this.modelo, this.vista, this);
 	}
 	
 	public ControladorLoger makeControladorLoger() {
