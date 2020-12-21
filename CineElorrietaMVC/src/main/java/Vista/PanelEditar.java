@@ -1,4 +1,4 @@
-/*package Vista;
+package Vista;
 
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -7,33 +7,41 @@ import Controlador.ControladorPanelEditar;
 
 import javax.swing.JLabel;
 import java.awt.Font;
+import javax.swing.JTextArea;
+import javax.swing.JButton;
 
 @SuppressWarnings("serial")
 public class PanelEditar extends JPanel {
-	private JTextField textField;
-	private JLabel lblNombrePeli ;
 	private ControladorPanelEditar controladorpaneleditar;
 
 	
 	public PanelEditar(ControladorPanelEditar controladorpaneleditar) {
-		setLayout(null);
 		setBounds(150, 150, 530, 505);
+		setLayout(null);
 		
-		textField = new JTextField();
-		textField.setBounds(245, 77, 210, 92);
-		add(textField);
-		textField.setColumns(10);
+		JTextArea textArea = new JTextArea();
+		textArea.setBounds(26, 46, 472, 303);
+		add(textArea);
 		
-		lblNombrePeli = new JLabel("NOMBRE PELI");
-		lblNombrePeli.setFont(new Font("Times New Roman", Font.BOLD, 30));
-		lblNombrePeli.setBounds(10, 77, 224, 56);
-		add(lblNombrePeli);
+		JButton btnAtras = new JButton("Atras");
+		btnAtras.setBounds(27, 400, 89, 54);
+		add(btnAtras);
 		
-		JLabel lblGeneroPeli = new JLabel("GENERO PELI");
-		lblGeneroPeli.setFont(new Font("Times New Roman", Font.BOLD, 30));
-		lblGeneroPeli.setBounds(10, 212, 224, 67);
-		add(lblGeneroPeli);
+		JButton btnEditar = new JButton("Editar");
+		btnEditar.setBounds(126, 400, 89, 54);
+		add(btnEditar);
+		
+		JButton btnEliminar = new JButton("Eliminar");
+		btnEliminar.setBounds(225, 400, 89, 54);
+		add(btnEliminar);
+		
+		JButton btnAñadir = new JButton("A\u00F1adir");
+		btnAñadir.setBounds(324, 400, 89, 54);
+		add(btnAñadir);
+		
+		JButton btnGuardar = new JButton("Guardar");
+		btnGuardar.setBounds(423, 400, 89, 54);
+		add(btnGuardar);
 
 	}
-
-}*/
+}
