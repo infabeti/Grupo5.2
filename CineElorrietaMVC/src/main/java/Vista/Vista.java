@@ -7,13 +7,16 @@ import javax.swing.JPanel;
 public class Vista extends JFrame{
 
 	public Vista() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setBounds(150, 150, 540, 565);
+		this.setVisible(true);
 	}
 	
 	public void mostrarPanel(JPanel panel) {
 		this.setContentPane(panel);
-		this.setVisible(true);
+		this.setPreferredSize(panel.getSize());
+		this.pack();
+		this.setPreferredSize(null);
 	}
 	
 }

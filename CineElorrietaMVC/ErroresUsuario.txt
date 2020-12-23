@@ -1,0 +1,9 @@
+--------------------------
+2020/12/15 16:13:42
+ERROR LOGIN
+Se ha insertado un usuario y contraseña equivocadas
+--------------------------
+2020/12/15 16:13:51
+ERROR LOGIN
+Se ha insertado un usuario y contraseña equivocadas
+
