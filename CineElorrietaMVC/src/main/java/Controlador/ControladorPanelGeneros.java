@@ -56,7 +56,6 @@ public class ControladorPanelGeneros {
 	{
 		JTextArea TextoPelis = panelGeneros.GetTextArea();
 		JLabel HoraLabel = panelGeneros.getLabelHoras();
-		modelo = new Modelo();
 		GestionDias GestorDias = this.modelo.getGestionDias();
 		HoraLabel.setText("Horas restantes: "+this.modelo.formatearTiempoString(GestorDias.getDia(GestorDias.GetSelectedDia()).MinutosRestantes()));
 		ArrayExtendible<Pelicula> PelisHoy = GestorDias.getDia(GestorDias.GetSelectedDia()).getPelisHoy();
